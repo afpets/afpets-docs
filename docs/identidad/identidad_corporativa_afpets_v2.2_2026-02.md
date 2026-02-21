@@ -345,6 +345,32 @@ Donde:
 
 Esto define automáticamente cuántas consultas mensuales incluir por plan.
 
+### 16.7 Tabla solicitada — Peor caso (LLM más costoso del set + consulta larga)
+
+Supuestos de peor caso:
+- Modelo: Claude Haiku 4.5
+- Consulta larga: 2.500 input + 1.200 output
+- Costo LLM puro: **USD 0,0085** por consulta
+- Conversión a ARS (TC 1.750): **$14,88** por consulta
+
+| Plan | Precio | Costo por consulta (peor caso) | % del plan por 1 consulta | Consultas para llegar al 1% del plan |
+|---|---:|---:|---:|---:|
+| Esencial | $8.000 | $14,88 | 0,19% | 5,4 |
+| Plus | $12.000 | $14,88 | 0,12% | 8,1 |
+| Premium/Familia | $20.000 | $14,88 | 0,07% | 13,4 |
+
+> Lectura clave: **por consulta individual**, incluso en peor caso, el costo es bajo.  
+> Pero **acumulado mensual**, el 1% del plan se alcanza rápido si todas las consultas fuesen al modelo más caro.
+
+### 16.8 ¿El costo LLM supera el 1% del valor de la membresía?
+
+- **Por consulta individual:** no, en general no supera 1% en los planes definidos.
+- **Por usuario/mes:** sí puede superar 1% si hay varias consultas mensuales en modelo caro.
+
+Conclusión operativa:
+- El objetivo realista no debería ser 1% mensual, sino **5% a 15%** del plan para bot + mensajería, con ruteo inteligente de modelos.
+- Para sostener margen, el modelo caro debe usarse en casos puntuales (minoría de consultas), no como default.
+
 ---
 
 ## 17) Próxima iteración inmediata (v2.3)
