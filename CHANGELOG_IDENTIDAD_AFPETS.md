@@ -5,7 +5,8 @@
 - Se añade sección de **estado previo al MVP** con check de completitud (80%) y pendientes críticos.
 - Se incorporan reglas económicas acordadas: comisión canal <=20%, escenarios de impuestos (20/35/40) y meta APAVI $400.000/mes al mes 3.
 - Se formaliza un **motor de métricas MVP** (KPI semanales, económicos mensuales y KPI de objetivo APAVI).
-- Se define backlog inmediato para v2.3 con foco en empaquetado de oferta y tabla de escenarios.
+- Se incorpora costeo preliminar por consulta IA con benchmarking de precios OpenAI / Google / Anthropic y regla de factor de seguridad (x4 a x8).
+- Se define backlog inmediato para v2.3 con foco en empaquetado de oferta, tabla de escenarios y cupos por plan según costo real por consulta.
 
 ## v2.1.0 - 2026-02-21
 - Se crea `docs/identidad/identidad_corporativa_afpets_v2.1_2026-02.md` como base estratégica limpia y versionable.
