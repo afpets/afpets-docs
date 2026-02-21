@@ -10,7 +10,8 @@
 - Se deja conclusión operativa: el 1% mensual es umbral demasiado estricto para uso real; rango objetivo sugerido para bot+mensajería: 5% a 15%.
 - Se incorpora recomendación de diseño comercial: diferenciar planes por valor percibido + cupo justo + recargas, evitando upgrades forzados.
 - Se añade simulación base de remanente AFPets por precio de plan (considerando impuestos, comisión fija, operación y LLM).
-- Se define backlog inmediato para v2.3 con foco en empaquetado de oferta, tabla de escenarios y cupos por plan según costo real por consulta.
+- Se agrega propuesta concreta de planes (Esencial/Plus + recargas) y tabla de 3 escenarios económicos con margen AFPets.
+- Se define backlog inmediato para v2.3 con foco en cierre de banda de precios, valor de recarga y contrato comercial APAVI.
 
 ## v2.1.0 - 2026-02-21
 - Se crea `docs/identidad/identidad_corporativa_afpets_v2.1_2026-02.md` como base estratégica limpia y versionable.
