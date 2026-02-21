@@ -1,0 +1,6 @@
+.openclaw/
+config/
+tools/
+node_modules/
+.env
+*.log
