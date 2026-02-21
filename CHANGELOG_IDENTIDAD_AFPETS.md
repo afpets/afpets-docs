@@ -1,5 +1,12 @@
 # CHANGELOG_IDENTIDAD_AFPETS
 
+## v2.2.0 - 2026-02-21
+- Se crea `docs/identidad/identidad_corporativa_afpets_v2.2_2026-02.md` incorporando acuerdos de conversación en vivo.
+- Se añade sección de **estado previo al MVP** con check de completitud (80%) y pendientes críticos.
+- Se incorporan reglas económicas acordadas: comisión canal <=20%, escenarios de impuestos (20/35/40) y meta APAVI $400.000/mes al mes 3.
+- Se formaliza un **motor de métricas MVP** (KPI semanales, económicos mensuales y KPI de objetivo APAVI).
+- Se define backlog inmediato para v2.3 con foco en empaquetado de oferta y tabla de escenarios.
+
 ## v2.1.0 - 2026-02-21
 - Se crea `docs/identidad/identidad_corporativa_afpets_v2.1_2026-02.md` como base estratégica limpia y versionable.
 - Se normaliza estructura en formato “Biblia Base” con criterios de certeza: ✅ Validado / 🧪 Hipótesis / 🔮 Visión.
