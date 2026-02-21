@@ -295,7 +295,59 @@ Falta cerrar 4 decisiones de negocio (bundle/entrada dual, pricing inicial, log�
 
 ---
 
-## 16) Próxima iteración inmediata (v2.3)
+## 16) Costeo preliminar por consulta de IA (investigación externa)
+
+> Objetivo: estimar costo unitario por consulta para definir cupos de planes.
+
+### 16.1 Fuentes de referencia (2026-02-21)
+- OpenAI API Pricing (GPT-5 mini): input $0.25 / 1M, output $2.00 / 1M.
+- Google Vertex AI Pricing (Gemini 2.5 Flash / Flash Lite):
+  - Flash Lite: input $0.10 / 1M, output $0.40 / 1M.
+  - Flash: input $0.30 / 1M, output $2.50 / 1M.
+- Anthropic API Pricing (Haiku 4.5): input $1.00 / 1M, output $5.00 / 1M.
+
+### 16.2 Perfiles de consulta usados para simulación
+- Corta: 600 input + 300 output tokens.
+- Media: 1.200 input + 600 output tokens.
+- Larga: 2.500 input + 1.200 output tokens.
+
+### 16.3 Costo estimado por consulta (solo LLM)
+
+| Modelo | Corta (USD) | Media (USD) | Larga (USD) |
+|---|---:|---:|---:|
+| Gemini 2.5 Flash Lite | 0.00018 | 0.00036 | 0.00073 |
+| Gemini 2.5 Flash | 0.00093 | 0.00186 | 0.00375 |
+| GPT-5 mini | 0.00075 | 0.00150 | 0.00303 |
+| Claude Haiku 4.5 | 0.00210 | 0.00420 | 0.00850 |
+
+### 16.4 Conversión aproximada a ARS (TC referencia 1.475 / 1.750)
+
+En escenario base de modelos eficientes (Flash Lite / GPT-5 mini), una consulta típica queda en un orden de **centavos a pocos pesos ARS** de costo LLM puro.
+
+### 16.5 Ajuste de realidad operativa (factor de seguridad)
+
+Para no subestimar, usar:
+
+`costo_real_consulta = costo_LLM_puro × factor_seguridad`
+
+Factor recomendado para MVP: **x4 a x8**, para absorber:
+- contexto histórico creciente,
+- reintentos/fallback entre modelos,
+- moderación/validaciones,
+- ineficiencias iniciales de prompts.
+
+### 16.6 Regla para definir cupos de planes
+
+`costo_bot_plan <= 15% a 20% del precio del plan`
+
+Donde:
+- `costo_bot_plan = consultas_incluidas * costo_real_consulta`
+
+Esto define automáticamente cuántas consultas mensuales incluir por plan.
+
+---
+
+## 17) Próxima iteración inmediata (v2.3)
 
 1. Cerrar decisión de empaquetado (bundle vs dual vs híbrido).
 2. Armar tabla formal de 3 escenarios (conservador, base, agresivo) con:
@@ -304,8 +356,9 @@ Falta cerrar 4 decisiones de negocio (bundle/entrada dual, pricing inicial, log�
    - impuesto,
    - remanente,
    - membresías objetivo para APAVI.
-3. Definir umbral de Plan B al mes 2.
-4. Publicar versión para discusión operativa con APAVI.
+3. Definir cupos por plan usando el costo por consulta + factor de seguridad.
+4. Definir umbral de Plan B al mes 2.
+5. Publicar versión para discusión operativa con APAVI.
 
 ---
 
