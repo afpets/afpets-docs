@@ -373,7 +373,54 @@ Conclusión operativa:
 
 ---
 
-## 17) Próxima iteración inmediata (v2.3)
+## 17) Diseño de planes recomendado (sin fricción de upgrade)
+
+### 17.1 Principio
+No conviene diferenciar planes **solo** por cantidad de consultas.  
+Mejor: diferenciar por valor de servicio, y usar consultas como límite de uso justo + recargas.
+
+### 17.2 Estructura sugerida
+- **Esencial**: cubre uso normal (pocas consultas/mes), seguridad completa, recordatorios básicos.
+- **Plus (recomendado)**: misma propuesta central + prioridad de respuesta + recordatorios avanzados + mejor historial/seguimiento.
+- **Recargas de consultas**: el usuario no está obligado a subir de plan si solo tuvo un mes atípico.
+
+### 17.3 Política de consumo
+- Cupo mensual incluido por plan (uso justo).
+- Si se excede, ofrecer:
+  1) pack de recarga de consultas,
+  2) o upgrade sugerido (no forzado).
+
+Esto reduce churn por “castigo” y mantiene sensación de control del usuario.
+
+### 17.4 Recomendación inicial de cupos (MVP)
+- Esencial: 5 consultas mensuales.
+- Plus: 15 consultas mensuales.
+- Pack recarga: +10 consultas.
+
+> Estos valores se deben validar en cohortes reales (30/60/90 días).
+
+---
+
+## 18) Equilibrio precio justo vs margen AFPets (simulación base)
+
+Supuestos de simulación base por usuario/mes:
+- Carga impositiva: 35% (escenario base).
+- Comisión canal fija: $1.200.
+- Infraestructura + WhatsApp + operación: $600.
+- Costo LLM estimado: $150.
+
+| Precio plan | Remanente estimado AFPets (base) |
+|---:|---:|
+| $8.000 | $3.250 |
+| $10.000 | $4.550 |
+| $12.000 | $5.850 |
+| $15.000 | $7.800 |
+
+Conclusión: con esta estructura, el costo de IA se mantiene bajo frente al precio total; el peso mayor en margen lo explican impuestos + comisión comercial.
+
+---
+
+## 19) Próxima iteración inmediata (v2.3)
 
 1. Cerrar decisión de empaquetado (bundle vs dual vs híbrido).
 2. Armar tabla formal de 3 escenarios (conservador, base, agresivo) con:
@@ -382,7 +429,7 @@ Conclusión operativa:
    - impuesto,
    - remanente,
    - membresías objetivo para APAVI.
-3. Definir cupos por plan usando el costo por consulta + factor de seguridad.
+3. Definir cupos por plan y precio de recargas usando uso real de cohortes.
 4. Definir umbral de Plan B al mes 2.
 5. Publicar versión para discusión operativa con APAVI.
 
