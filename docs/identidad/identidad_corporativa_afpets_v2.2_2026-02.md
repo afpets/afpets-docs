@@ -420,16 +420,41 @@ Conclusión: con esta estructura, el costo de IA se mantiene bajo frente al prec
 
 ---
 
-## 19) Próxima iteración inmediata (v2.3)
+## 19) Propuesta de planes para validación (v2.3-pre)
 
-1. Cerrar decisión de empaquetado (bundle vs dual vs híbrido).
-2. Armar tabla formal de 3 escenarios (conservador, base, agresivo) con:
-   - precio,
-   - comisión,
-   - impuesto,
-   - remanente,
-   - membresías objetivo para APAVI.
-3. Definir cupos por plan y precio de recargas usando uso real de cohortes.
+### 19.1 Estructura funcional
+- **Esencial:** seguridad QR+Bot, 5 consultas/mes, soporte estándar.
+- **Plus (recomendado):** seguridad QR+Bot, 15 consultas/mes, prioridad de respuesta y seguimiento más completo.
+- **Recarga:** pack +10 consultas (sin cambio de plan).
+
+### 19.2 Escenarios económicos de referencia
+
+Supuestos por escenario:
+- Conservador: impuesto 40%, comisión fija $1.500, operación+tecnología $900 por usuario/mes.
+- Base: impuesto 35%, comisión fija $1.200, operación+tecnología $750 por usuario/mes.
+- Agresivo: impuesto 20%, comisión fija $900, operación+tecnología $700 por usuario/mes.
+
+| Escenario | Plan | Precio | Neto AFPets estimado | Margen AFPets |
+|---|---|---:|---:|---:|
+| Conservador | Esencial | $8.000 | $2.400 | 30,0% |
+| Conservador | Plus | $12.000 | $4.800 | 40,0% |
+| Base | Esencial | $10.000 | $4.550 | 45,5% |
+| Base | Plus | $15.000 | $7.800 | 52,0% |
+| Agresivo | Esencial | $12.000 | $8.000 | 66,7% |
+| Agresivo | Plus | $18.000 | $12.800 | 71,1% |
+
+### 19.3 Lectura ejecutiva
+- Con carga fiscal alta (35%-40%), alcanzar 60% neto AFPets exige ticket más alto y/o menor comisión/costo operativo.
+- El objetivo de 60% es viable en escenarios favorables o con optimización fuerte de estructura.
+- Para MVP, conviene validar primero banda **$10.000 / $15.000** con comisión fija controlada y recargas.
+
+---
+
+## 20) Próxima iteración inmediata (v2.3)
+
+1. Confirmar banda de precios de salida (recomendación: $10.000 Esencial y $15.000 Plus).
+2. Definir valor de recarga (+10 consultas).
+3. Cerrar contrato comercial APAVI (comisión fija y reglas de pago por membresía activa al día).
 4. Definir umbral de Plan B al mes 2.
 5. Publicar versión para discusión operativa con APAVI.
 
