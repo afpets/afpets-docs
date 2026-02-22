@@ -239,7 +239,12 @@ No se permite en el documento maestro:
 
 ### 13.2 Pendiente de cierre antes de congelar MVP 🧪
 - ✅ **Definido:** el MVP sale como **bundle obligatorio QR+Bot** (oferta única de salida). No se ofrece bot-only en el lanzamiento.
-- Definir política de activación logística del QR (stock, entrega, activación remota).
+- 🧪 **Activación QR (definición operativa):** el QR se activa por quien lo escanea (puede ser el canal en punto de venta o el dueño al llevárselo). El proceso es el mismo: escanear → iniciar registro → completar datos de mascota (sin requerir pago al inicio).
+  - Modalidades de registro (MVP):
+    1) WhatsApp (asistente guía paso a paso)
+    2) Web (formulario simple)
+  - **Regla comercial:** el pago se ofrece al final del registro (primero alta/valor, luego cobro).
+  - Pendiente: definir logística de stock/entrega y el detalle del flujo (pantallas/mensajes).
 - Definir pricing de lanzamiento exacto por plan y por canal.
 - Definir métricas y umbrales de Plan B al mes 2.
 
