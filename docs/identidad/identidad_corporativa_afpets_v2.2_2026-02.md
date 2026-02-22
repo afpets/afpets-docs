@@ -238,17 +238,14 @@ No se permite en el documento maestro:
 - Rango preliminar de membresía a explorar: **$8.000 a $20.000 ARS** (y contraste con hipótesis de $5.000).
 
 ### 13.2 Pendiente de cierre antes de congelar MVP 🧪
-- Definir si el MVP sale como:
-  1) Bundle obligatorio (QR+Bot),
-  2) Entrada dual (QR+Bot / Bot solo),
-  3) Híbrido por ciudad (recomendación preliminar).
+- ✅ **Definido:** el MVP sale como **bundle obligatorio QR+Bot** (oferta única de salida). No se ofrece bot-only en el lanzamiento.
 - Definir política de activación logística del QR (stock, entrega, activación remota).
 - Definir pricing de lanzamiento exacto por plan y por canal.
 - Definir métricas y umbrales de Plan B al mes 2.
 
 ### 13.3 Respuesta ejecutiva a la pregunta “¿está completo lo previo al MVP?”
 **Estado: 80% completo.**  
-Falta cerrar 4 decisiones de negocio (bundle/entrada dual, pricing inicial, logística QR multi-ciudad, umbrales de plan B).
+Falta cerrar 3 decisiones de negocio (pricing inicial, logística QR multi-ciudad, umbrales de plan B).
 
 ---
 

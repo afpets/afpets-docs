@@ -11,7 +11,7 @@ AFPets es un ecosistema integral para dueños de mascotas (foco inicial: perros)
 - Canal inicial definido: **APAVI** (General Villegas, Buenos Aires, Argentina).
 
 ## Decisiones ya tomadas
-- Modelo de producto: enfoque **híbrido** (QR+Bot como core; bot-only posible donde no haya logística QR).
+- Modelo de producto (salida MVP): **bundle obligatorio QR+Bot** (oferta única en lanzamiento).
 - Comisión de canal: tope conceptual **<=20%**; se trabaja con comisión fija por membresía activa.
 - Pricing candidato para validación: **Esencial $9.900** / **Plus $14.900**.
 - Comisión fija candidata APAVI: **$1.200 por membresía activa/mes**.

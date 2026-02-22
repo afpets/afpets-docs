@@ -1,5 +1,10 @@
 # DECISIONES_IDENTIDAD_AFPETS
 
+## 2026-02-22 — Definición de oferta MVP (bundle único)
+- Se define que el lanzamiento del MVP sale con **oferta única**: **bundle QR+Bot**.
+- Se descarta (por ahora) la salida con **entrada dual** (QR+Bot / bot-only) para el lanzamiento.
+- Nota: esto no impide evaluar bot-only como 🔮 visión o 🧪 experimento futuro, pero no forma parte de la oferta de salida.
+
 ## 2026-02-21 — Consolidación de acuerdos live (v2.2)
 - Se confirma principio rector del modelo: QR (compra) + Bot (permanencia).
 - Se establece APAVI como primer canal de validación y meta de ingreso mensual objetivo al mes 3.
