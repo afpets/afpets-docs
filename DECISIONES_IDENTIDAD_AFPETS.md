@@ -19,3 +19,26 @@
 - Se crea `CHANGELOG_IDENTIDAD_AFPETS.md` para historial de cambios.
 - Se crea `DECISIONES_IDENTIDAD_AFPETS.md` para decisiones estratégicas/documentales.
 
+---
+
+## Template (usar para nuevas decisiones)
+
+**Fecha:** YYYY-MM-DD  
+**Título:** (una línea)  
+**Certeza:** ✅ | 🧪 | 🔮  
+
+**Decisión (en una frase):**
+
+**Contexto:**
+
+**Opciones consideradas (si aplica):**
+
+**Impacto (qué cambia):**
+- Documento maestro:
+- Comercial:
+- Producto/operación:
+
+**Próximo paso (accionable):**
+
+**Links:** (archivos/secciones relevantes)
+
