@@ -1,6 +1,6 @@
-# 🐾 AFPets — Biblia Base v2.1
+# 🐾 AFPets — Biblia Base v2.2
 
-**Versión:** 2.1 (borrador estratégico validable)  
+**Versión:** 2.2 (borrador estratégico validable)  
 **Fecha:** 2026-02-21  
 **Estado:** Documento maestro en construcción controlada  
 **Propósito:** Fuente Única de Verdad para comunicar AFPets por audiencia sin contradicciones.
