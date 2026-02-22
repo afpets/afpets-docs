@@ -12,6 +12,12 @@
   2) **Web** con formulario simple
 - Regla comercial: el **pago se ofrece al final** del registro (primero registrar mascota / entregar valor, después cobrar).
 
+## 2026-02-22 — Momento de activación + control de cobro (MVP)
+- Se define **Opción A** como regla: el QR queda “activo” al completar datos básicos de la mascota (baja fricción).
+- Se define que la habilitación de funciones de valor (ej. mostrar contacto protegido / features de seguridad avanzadas / alertas) puede quedar **condicionada al pago**.
+- Se define que el cobro debe ser **directo por AFPets** (checkout/link de pago en el flujo), para no depender del canal (APAVI) como recaudador.
+- Pendiente 🧪: resolver cómo se recupera el costo físico del QR (ej. cargo inicial/tag fee, primer mes, o esquema de stock/consignación).
+
 ## 2026-02-21 — Consolidación de acuerdos live (v2.2)
 - Se confirma principio rector del modelo: QR (compra) + Bot (permanencia).
 - Se establece APAVI como primer canal de validación y meta de ingreso mensual objetivo al mes 3.
