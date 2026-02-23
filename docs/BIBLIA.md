@@ -50,6 +50,7 @@ Fuente: regla operativa del documento maestro en `docs/identidad/identidad_corpo
 
 - `docs/contexto/PROJECT_OVERVIEW_AFPETS.md`
 - `docs/contexto/HANDOVER_AFPETS.md`
+- `docs/contexto/PERFIL_FUNDADOR_ALEXIS.md` (cómo decidir/trabajar)
 
 ### 5.3 Identidad (versionado)
 
