@@ -28,6 +28,16 @@ El formato estándar para cualquier rama creada o modificada por una IA es:
 - Permite filtrar y auditar fácilmente qué cambios fueron originados por agentes y cuáles por desarrolladores humanos.
 - Mantiene aislado el flujo de trabajo de cada Inteligencia Artificial, evitando colisiones.
 
+### Política de Ramas Base (Origen)
+**Regla de Oro:** Salvo indicación explícita en contra (ej. hotfix crítico), **toda nueva rama de trabajo debe crearse a partir de la rama `staging` actualizada**.
+
+**Flujo Correcto:**
+1. `git checkout staging`
+2. `git pull origin staging` (Asegurar estar al día)
+3. `git checkout -b agent/<nombre>/<tarea>`
+
+⛔ **Prohibido:** Crear ramas desde `main` o desde ramas de otros agentes sin haber pasado por `staging`. Esto garantiza que todos trabajemos sobre la versión de desarrollo más estable y compartida.
+
 ### Flujo de Integración Continua (Staging)
 
 Toda rama creada por un agente (humano o IA) está sometida a un riguroso esquema de control de paso a paso.  
