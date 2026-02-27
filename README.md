@@ -5,10 +5,36 @@ Bienvenido al repositorio oficial de documentación empresarial y operativa de A
 ## Estructura de la Documentación
 Esta empresa se gestiona por medio de Agentes Inteligentes autónomos (OpenClaw) que leen, procesan y ejecutan tareas basándose **estrictamente** en las políticas aquí estipuladas.
 
-- `01_Empresa/`: Contiene el alma de la empresa, Misión, Visión y Problema/Solución.
-- `02_Modelo_de_Negocio/`: Tarifas, comisiones (Ej. modelo APAVI) y estructura de finanzas.
-- `03_Producto_y_MVP/`: Requerimientos técnicos y fases operativas del producto físico (QR) y software (Bot).
-- `04_Marketing_y_Ventas/`: Guiones comerciales, estrategia de distribución y retención B2B2C.
-- `05_Riesgos_y_Legales/`: Disclaimers obligatorios para el bot veterinario y políticas contra riesgos corporativos y sanitarios.
+- `01_Estrategia_y_plan_de_negocio/`: Contiene el marco fundacional y estratégico. Aquí vive el Plan de Negocio (la concepción de AFPets) y los planes de lanzamiento (objetivos, público, pricing de campañas).
+- `02_Productos_y_sevicios/`: El portafolio organizado y modularizado de AFPets. Cada producto (como el Asistente Veterinario o el Identificador QR) tiene su propia carpeta con una ficha de descripción estándar y sus activos técnicos o de diseño asociados (ej. SCAD/STL, guiones).
+- `03_Documentacion_corporativa/`: Motor operativo interno de la empresa. En el futuro, aquí se documentarán los procesos administrativos, herramientas de software desarrolladas para la gestión y las áreas del organigrama empresarial.
 
-⚠️ **IMPORTANTE:** Para cualquier agente (afpets-product, afpets-marketing, afpets-commander, etc.) o humano colaborando en este proyecto, es **obligatorio** leer y cumplir el archivo `REGLAS_AGENTES.md` ubicado en el directorio raíz.
+
+## Convenciones de Desarrollo para Agentes IA
+
+Dado que diferentes agentes inteligentes operan como contribuyentes activos en este repositorio (ej. Antigravity, OpenClaw), es obligatorio utilizar un estándar para el nombramiento de ramas (branches) al realizar *commits* y *push*.
+
+### Política de Nomenclatura de Ramas (Branches)
+El formato estándar para cualquier rama creada o modificada por una IA es:
+
+`agent/<nombre-del-agente>/<tipo-de-tarea>`
+
+**Ejemplos de uso:**
+- Para organizar documentación: `agent/antigravity/docs-restructuracion`
+- Para corregir un error en el código: `agent/openclaw/fix-conexion-api`
+- Para desarrollar una nueva función: `agent/antigravity/feat-panel-admin`
+
+**¿Por qué utilizamos esta estructura?**
+- Permite filtrar y auditar fácilmente qué cambios fueron originados por agentes y cuáles por desarrolladores humanos.
+- Mantiene aislado el flujo de trabajo de cada Inteligencia Artificial, evitando colisiones.
+
+### Flujo de Integración Continua (Staging)
+
+Toda rama creada por un agente (humano o IA) está sometida a un riguroso esquema de control de paso a paso.  
+El repositorio central de AFPets respeta los siguientes "embudos" de código:
+
+1. **Ramas Efímeras de Agentes (`agent/...`) y Humanos (`feat/...`, `fix/...`)**: Ramas a corto plazo destinadas a un desarrollo particular (ej. un fix rápido o una redacción de documentos).
+2. **Entorno `staging` (Embudo Principal):** Esta es la **antesala a Producción**. Ningún agente IA está autorizado a hacer `push` o `merge` directamente a la rama `main`. Toda rama efímera finalizada debe convertirse en un Pull Request (PR) apuntando hacia `staging`. En esta rama es donde las contribuciones de OpenClaw, Antigravity y desarrolladores humanos se integran y pureban en conjunto para verificar compatibilidad y predecir errores.
+3. **Entorno `main` (Producción):** Rama sagrada del proyecto. Los cambios aquí son código consolidado y funcional para los clientes de AFPets. Solo aterriza código desde `staging` tras revisiones estrictas.
+
+*Nota para OpenClaw y demás inteligencias operantes: Antes de fusionar trabajo finalizado, revisad contra* `staging` *para resolver posibles conflictos tempranos.*
