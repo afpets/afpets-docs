@@ -27,3 +27,14 @@ El formato estándar para cualquier rama creada o modificada por una IA es:
 **¿Por qué utilizamos esta estructura?**
 - Permite filtrar y auditar fácilmente qué cambios fueron originados por agentes y cuáles por desarrolladores humanos.
 - Mantiene aislado el flujo de trabajo de cada Inteligencia Artificial, evitando colisiones.
+
+### Flujo de Integración Continua (Staging)
+
+Toda rama creada por un agente (humano o IA) está sometida a un riguroso esquema de control de paso a paso.  
+El repositorio central de AFPets respeta los siguientes "embudos" de código:
+
+1. **Ramas Efímeras de Agentes (`agent/...`) y Humanos (`feat/...`, `fix/...`)**: Ramas a corto plazo destinadas a un desarrollo particular (ej. un fix rápido o una redacción de documentos).
+2. **Entorno `staging` (Embudo Principal):** Esta es la **antesala a Producción**. Ningún agente IA está autorizado a hacer `push` o `merge` directamente a la rama `main`. Toda rama efímera finalizada debe convertirse en un Pull Request (PR) apuntando hacia `staging`. En esta rama es donde las contribuciones de OpenClaw, Antigravity y desarrolladores humanos se integran y pureban en conjunto para verificar compatibilidad y predecir errores.
+3. **Entorno `main` (Producción):** Rama sagrada del proyecto. Los cambios aquí son código consolidado y funcional para los clientes de AFPets. Solo aterriza código desde `staging` tras revisiones estrictas.
+
+*Nota para OpenClaw y demás inteligencias operantes: Antes de fusionar trabajo finalizado, revisad contra* `staging` *para resolver posibles conflictos tempranos.*
